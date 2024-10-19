@@ -1,0 +1,13 @@
+# docker-compose.yml
+
+version: '3'
+
+services:
+  trading-bot:
+    build: .
+    image: trading-bot
+    container_name: trading-bot
+    volumes:
+      - .:/app
+    env_file:
+      - .env
